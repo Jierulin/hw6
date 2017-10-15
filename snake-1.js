@@ -1,6 +1,6 @@
-//can only print out score x instead of score 1, score 2. etc
-
 var SNAKE_BLOCK_SIZE = 20;
+
+var s=0
 
 var snakeHead = {
   x: 100,
@@ -87,16 +87,15 @@ function extendSnake() {
 }
 
 function checkFoodReached() {
-	
-	x=0
+
 	
   if (dist(snakeHead.x, snakeHead.y, foodLocation.x, foodLocation.y) == 0) {
     foodLocation.x = SNAKE_BLOCK_SIZE * floor(random(width / SNAKE_BLOCK_SIZE));
     foodLocation.y = SNAKE_BLOCK_SIZE * floor(random(height / SNAKE_BLOCK_SIZE));
 		
-		x=x+1
+		s=s+1
 		textSize(32);
-		text("score x", 10, 30);
+		text("score: "+s, 10, 30);
 		
     // make the snake longer!
     extendSnake();
