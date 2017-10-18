@@ -110,7 +110,7 @@ function checkFoodReached() {
 }
 
 	function hitboundery(){
-	if(snakeHead.x>=400||snakeHead.y>=400){
+	if(snakeHead.x>=400||snakeHead.x<=0||snakeHead.y>=400||snakeHead.y<=0){
 		 textSize(13);
 		text("you exceed the boundery!!",10,30)
 		 noLoop();
